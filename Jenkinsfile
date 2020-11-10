@@ -1,4 +1,5 @@
 pipeline {
+    tools {maven 'Maven_3.0.5'}
     agent any
 
     stages {
