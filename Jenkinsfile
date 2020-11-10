@@ -10,6 +10,13 @@ pipeline {
                 }
             
         }
+        stage ('Testing Stage') {
+
+            steps {
+                {
+                    sh 'mvn test'
+                }
+            }
 
         
     }
