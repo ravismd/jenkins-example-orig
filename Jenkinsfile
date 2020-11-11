@@ -8,7 +8,7 @@ pipeline {
 
             steps 
                 {
-                    echo "DB ENGINE is '$DB_ENGINE'"
+                    
                     sh 'mvn clean compile'
                 }
             
