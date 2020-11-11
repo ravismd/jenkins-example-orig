@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    environment {
-        DB_ENGINE = 'sqllite'
+    parameters {
+        choice(name: 'VERSION', choices: ['1.2.2', '1.2.3'], description: 'Build version')
     }
     stages {
         stage ('Compile Stage') {
