@@ -5,12 +5,13 @@ pipeline {
         booleanParam(name: 'executeTest', defaultValue: 'true', descriptiom: ' ')
     }
     stages {
-        when{
+      
+        stage ('Compile Stage') {
+              when{
             expression{
                 param.executeTest == 'true'
             }
         }
-        stage ('Compile Stage') {
 
             steps 
                 {
