@@ -15,6 +15,7 @@ pipeline {
 
             steps 
                 {
+                    echo "Inside stage Complile"
                     
                     sh 'mvn clean compile'
                 }
