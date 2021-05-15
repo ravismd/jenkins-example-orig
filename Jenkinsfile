@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice(name: 'VERSION', choices: ['1.2.2', '1.2.3'], description: 'Build version') 
+        
         booleanParam(name: 'executeTest', defaultValue: 'true', description: ' ')
     }
     stages {
@@ -9,7 +9,7 @@ pipeline {
         stage ('Compile Stage') {
               when{
             expression{
-                params.VERSION == '1.2.7' 
+                params.executeTest == 'true' 
             }
         }
 
