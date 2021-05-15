@@ -3,14 +3,14 @@ pipeline {
     parameters {
         
         choice(name: 'VERSION', choices: ['1.2.2', '1.2.3'], description: 'Build version')
-        booleanParam(name: 'executeTest', defaultValue: 'true', description: ' ')
+        booleanParam(name: 'executeTest', description: ' ')
     }
     stages {
       
         stage ('Compile Stage') {
               when{
             expression{
-                params.VERSION == '1.2.2' && params.executeTest == 'true'
+               params.executeTest == 'true'
             }
         }
 
