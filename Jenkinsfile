@@ -9,7 +9,7 @@ pipeline {
         stage ('Compile Stage') {
               when{
             expression{
-                params.executeTest == 'false'
+                params.executeTest == 'true'
             }
         }
 
