@@ -8,6 +8,7 @@ pipeline {
     stages {
       
         stage ('Compile Stage') {
+            echo "executeTest: ${params.executeTest}"
               when{
             expression{
                params.executeTest == 'true'
