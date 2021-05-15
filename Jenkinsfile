@@ -8,16 +8,17 @@ pipeline {
     stages {
       
         stage ('Compile Stage') {
-            echo "executeTest: ${params.executeTest}"
+            
               when{
             expression{
-               params.executeTest == 'true'
+               params.VERSION == '1.2.2'
             }
         }
 
             steps 
                 {
                     echo "executeTest: ${params.executeTest}"
+                    echo "VERSION= ${params.VERSION}"
                     echo "Inside stage Complile"
                     
                     sh 'mvn clean compile'
