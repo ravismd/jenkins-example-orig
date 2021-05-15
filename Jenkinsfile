@@ -10,7 +10,7 @@ pipeline {
         stage ('Compile Stage') {
               when{
             expression{
-                params.VERSION == '1.2.2' 
+                params.VERSION == '1.2.2' && params.executeTest == 'true'
             }
         }
 
